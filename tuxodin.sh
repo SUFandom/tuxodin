@@ -1,6 +1,6 @@
 #!/bin/bash
 
-chmod +x bin/odin4
+chmod +x odin4
 
 if [ "$(uname -a | grep -o "Android")" == "Android" ]; then 
     echo "Sorry but Android is not supported, this script needs a window manager + A REAL LINUX DISTRO"
@@ -24,7 +24,7 @@ fi
 
 if [ "$(pwd | grep -o "tuxodin")" == "tuxodin" ]; then 
     echo "Pass, module loading..."
-    if [ -e bin/odin4 ]; then 
+    if [ -e odin4 ]; then 
         echo "Pass, ODIN4 Detected"
     else 
         echo "ODIN4 is missing"
@@ -288,7 +288,7 @@ function godspeed {
             if [[ $NANDERASE == 0 ]] && [[ $DOWNLOAD == 1 ]] && [[ $REBOOT == 0 ]]; then 
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4 -e -a "$AP" -b "$BL" -c "$CP" -s "$CSC" -u "$USERDATA" -d "$DEVICE_SELECTED" --reboot ; 
+                ./odin4 -e -a "$AP" -b "$BL" -c "$CP" -s "$CSC" -u "$USERDATA" -d "$DEVICE_SELECTED" --reboot ; 
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -296,7 +296,7 @@ function godspeed {
             elif [[ $NANDERASE == 1 ]] && [[ $DOWNLOAD == 1 ]] && [[ $REBOOT == 0 ]]; then 
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4 -a "$AP" -b "$BL" -c "$CP" -s "$CSC" -u "$USERDATA" -d "$DEVICE_SELECTED" --reboot ; 
+                ./odin4 -a "$AP" -b "$BL" -c "$CP" -s "$CSC" -u "$USERDATA" -d "$DEVICE_SELECTED" --reboot ; 
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -304,7 +304,7 @@ function godspeed {
             elif [[ $NANDERASE == 0 ]] && [[ $DOWNLOAD == 0 ]] && [ $REBOOT == 1 ]; then 
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4 -e -a "$AP" -b "$BL" -c "$CP" -s "$CSC" -u "$USERDATA" -d "$DEVICE_SELECTED" --redownload ; 
+                ./odin4 -e -a "$AP" -b "$BL" -c "$CP" -s "$CSC" -u "$USERDATA" -d "$DEVICE_SELECTED" --redownload ; 
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -312,7 +312,7 @@ function godspeed {
             elif [[ $NANDERASE == 1 ]] && [[ $DOWNLOAD == 0 ]] && [[ $REBOOT == 1 ]]; then
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4 -a "$AP" -b "$BL" -c "$CP" -s "$CSC" -u "$USERDATA" -d "$DEVICE_SELECTED" --redownload ; 
+                ./odin4 -a "$AP" -b "$BL" -c "$CP" -s "$CSC" -u "$USERDATA" -d "$DEVICE_SELECTED" --redownload ; 
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -340,7 +340,7 @@ function godspeed {
             if [[ $NANDERASE == 0 ]] && [[ $DOWNLOAD == 1 ]] && [[ $REBOOT == 0 ]]; then 
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4 -e -a "$AP" -b "$BL" -c "$CP" -s "$CSC" -d "$DEVICE_SELECTED" --reboot ;
+                ./odin4 -e -a "$AP" -b "$BL" -c "$CP" -s "$CSC" -d "$DEVICE_SELECTED" --reboot ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -348,7 +348,7 @@ function godspeed {
             elif [[ $NANDERASE == 1 ]] && [[ $DOWNLOAD == 1 ]] && [[ $REBOOT == 0 ]]; then 
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4 -a "$AP" -b "$BL" -c "$CP" -s "$CSC"  -d "$DEVICE_SELECTED" --reboot ;
+                ./odin4 -a "$AP" -b "$BL" -c "$CP" -s "$CSC"  -d "$DEVICE_SELECTED" --reboot ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -356,7 +356,7 @@ function godspeed {
             elif [[ $NANDERASE == 0 ]] && [[ $DOWNLOAD == 0 ]] && [ $REBOOT == 1 ]; then 
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4 -e -a "$AP" -b "$BL" -c "$CP" -s "$CSC"  -d "$DEVICE_SELECTED" --redownload ;
+                ./odin4 -e -a "$AP" -b "$BL" -c "$CP" -s "$CSC"  -d "$DEVICE_SELECTED" --redownload ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -364,7 +364,7 @@ function godspeed {
             elif [[ $NANDERASE == 1 ]] && [[ $DOWNLOAD == 0 ]] && [[ $REBOOT == 1 ]]; then
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4 -a "$AP" -b "$BL" -c "$CP" -s "$CSC" -d "$DEVICE_SELECTED" --redownload ;
+                ./odin4 -a "$AP" -b "$BL" -c "$CP" -s "$CSC" -d "$DEVICE_SELECTED" --redownload ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -392,7 +392,7 @@ function godspeed {
             if [[ $NANDERASE == 0 ]] && [[ $DOWNLOAD == 1 ]] && [[ $REBOOT == 0 ]]; then 
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4 -e -a "$AP" -b "$BL" -c "$CP"  -d "$DEVICE_SELECTED" --reboot ;
+                ./odin4 -e -a "$AP" -b "$BL" -c "$CP"  -d "$DEVICE_SELECTED" --reboot ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -400,7 +400,7 @@ function godspeed {
             elif [[ $NANDERASE == 1 ]] && [[ $DOWNLOAD == 1 ]] && [[ $REBOOT == 0 ]]; then 
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4 -a "$AP" -b "$BL" -c "$CP"  -d "$DEVICE_SELECTED" --reboot ;
+                ./odin4 -a "$AP" -b "$BL" -c "$CP"  -d "$DEVICE_SELECTED" --reboot ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -408,7 +408,7 @@ function godspeed {
             elif [[ $NANDERASE == 0 ]] && [[ $DOWNLOAD == 0 ]] && [ $REBOOT == 1 ]; then 
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4 -e -a "$AP" -b "$BL" -c "$CP"  -d "$DEVICE_SELECTED" --redownload ;
+                ./odin4 -e -a "$AP" -b "$BL" -c "$CP"  -d "$DEVICE_SELECTED" --redownload ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -416,7 +416,7 @@ function godspeed {
             elif [[ $NANDERASE == 1 ]] && [[ $DOWNLOAD == 0 ]] && [[ $REBOOT == 1 ]]; then
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4 -a "$AP" -b "$BL" -c "$CP" -d "$DEVICE_SELECTED" --redownload ;
+                ./odin4 -a "$AP" -b "$BL" -c "$CP" -d "$DEVICE_SELECTED" --redownload ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -444,7 +444,7 @@ function godspeed {
             if [[ $NANDERASE == 0 ]] && [[ $DOWNLOAD == 1 ]] && [[ $REBOOT == 0 ]]; then 
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4 -e -a "$AP" -b "$BL"   -d "$DEVICE_SELECTED" --reboot ;
+                ./odin4 -e -a "$AP" -b "$BL"   -d "$DEVICE_SELECTED" --reboot ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -452,7 +452,7 @@ function godspeed {
             elif [[ $NANDERASE == 1 ]] && [[ $DOWNLOAD == 1 ]] && [[ $REBOOT == 0 ]]; then 
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4 -a "$AP" -b "$BL"  -d "$DEVICE_SELECTED" --reboot ;
+                ./odin4 -a "$AP" -b "$BL"  -d "$DEVICE_SELECTED" --reboot ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -460,7 +460,7 @@ function godspeed {
             elif [[ $NANDERASE == 0 ]] && [[ $DOWNLOAD == 0 ]] && [ $REBOOT == 1 ]; then 
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4 -e -a "$AP" -b "$BL"  -d "$DEVICE_SELECTED" --redownload ;
+                ./odin4 -e -a "$AP" -b "$BL"  -d "$DEVICE_SELECTED" --redownload ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -468,7 +468,7 @@ function godspeed {
             elif [[ $NANDERASE == 1 ]] && [[ $DOWNLOAD == 0 ]] && [[ $REBOOT == 1 ]]; then
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4 -a "$AP" -b "$BL"  -d "$DEVICE_SELECTED" --redownload ;
+                ./odin4 -a "$AP" -b "$BL"  -d "$DEVICE_SELECTED" --redownload ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -496,7 +496,7 @@ function godspeed {
             if [[ $NANDERASE == 0 ]] && [[ $DOWNLOAD == 1 ]] && [[ $REBOOT == 0 ]]; then 
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4 -e -a "$AP" -d "$DEVICE_SELECTED" --reboot ;
+                ./odin4 -e -a "$AP" -d "$DEVICE_SELECTED" --reboot ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -504,7 +504,7 @@ function godspeed {
             elif [[ $NANDERASE == 1 ]] && [[ $DOWNLOAD == 1 ]] && [[ $REBOOT == 0 ]]; then 
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4 -a "$AP" -b "$BL"  -d "$DEVICE_SELECTED" --reboot ;
+                ./odin4 -a "$AP" -b "$BL"  -d "$DEVICE_SELECTED" --reboot ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -512,7 +512,7 @@ function godspeed {
             elif [[ $NANDERASE == 0 ]] && [[ $DOWNLOAD == 0 ]] && [ $REBOOT == 1 ]; then 
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4 -e -a "$AP" -b "$BL"  -d "$DEVICE_SELECTED" --redownload ;
+                ./odin4 -e -a "$AP" -b "$BL"  -d "$DEVICE_SELECTED" --redownload ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -520,7 +520,7 @@ function godspeed {
             elif [[ $NANDERASE == 1 ]] && [[ $DOWNLOAD == 0 ]] && [[ $REBOOT == 1 ]]; then
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4 -a "$AP" -b "$BL"  -d "$DEVICE_SELECTED" --redownload ;
+                ./odin4 -a "$AP" -b "$BL"  -d "$DEVICE_SELECTED" --redownload ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -548,7 +548,7 @@ function godspeed {
             if [[ $NANDERASE == 0 ]] && [[ $DOWNLOAD == 1 ]] && [[ $REBOOT == 0 ]]; then 
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4 -e -a "$AP" --reboot ;
+                ./odin4 -e -a "$AP" --reboot ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -556,7 +556,7 @@ function godspeed {
             elif [[ $NANDERASE == 1 ]] && [[ $DOWNLOAD == 1 ]] && [[ $REBOOT == 0 ]]; then 
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4 -a "$AP" -b "$BL"  --reboot ;
+                ./odin4 -a "$AP" -b "$BL"  --reboot ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -564,7 +564,7 @@ function godspeed {
             elif [[ $NANDERASE == 0 ]] && [[ $DOWNLOAD == 0 ]] && [ $REBOOT == 1 ]; then 
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4 -e -a "$AP" -b "$BL" --redownload ;
+                ./odin4 -e -a "$AP" -b "$BL" --redownload ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -572,7 +572,7 @@ function godspeed {
             elif [[ $NANDERASE == 1 ]] && [[ $DOWNLOAD == 0 ]] && [[ $REBOOT == 1 ]]; then
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4 -a "$AP" -b "$BL" --redownload ;
+                ./odin4 -a "$AP" -b "$BL" --redownload ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -600,7 +600,7 @@ function godspeed {
             if [[ $NANDERASE == 0 ]] && [[ $DOWNLOAD == 1 ]] && [[ $REBOOT == 0 ]]; then 
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4 -e -a "$AP" -b "$BL" --reboot ;
+                ./odin4 -e -a "$AP" -b "$BL" --reboot ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -608,7 +608,7 @@ function godspeed {
             elif [[ $NANDERASE == 1 ]] && [[ $DOWNLOAD == 1 ]] && [[ $REBOOT == 0 ]]; then 
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4 -a "$AP" -b "$BL"  --reboot ;
+                ./odin4 -a "$AP" -b "$BL"  --reboot ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -616,7 +616,7 @@ function godspeed {
             elif [[ $NANDERASE == 0 ]] && [[ $DOWNLOAD == 0 ]] && [ $REBOOT == 1 ]; then 
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4 -e -a "$AP" -b "$BL" --redownload ;
+                ./odin4 -e -a "$AP" -b "$BL" --redownload ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -624,7 +624,7 @@ function godspeed {
             elif [[ $NANDERASE == 1 ]] && [[ $DOWNLOAD == 0 ]] && [[ $REBOOT == 1 ]]; then
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4 -a "$AP" -b "$BL"   --redownload ;
+                ./odin4 -a "$AP" -b "$BL"   --redownload ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -652,7 +652,7 @@ function godspeed {
             if [[ $NANDERASE == 0 ]] && [[ $DOWNLOAD == 1 ]] && [[ $REBOOT == 0 ]]; then 
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4 -e -a "$AP" -b "$BL" -c "$CP"   --reboot ;
+                ./odin4 -e -a "$AP" -b "$BL" -c "$CP"   --reboot ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -660,7 +660,7 @@ function godspeed {
             elif [[ $NANDERASE == 1 ]] && [[ $DOWNLOAD == 1 ]] && [[ $REBOOT == 0 ]]; then 
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4 -a "$AP" -b "$BL" -c "$CP"   --reboot ;
+                ./odin4 -a "$AP" -b "$BL" -c "$CP"   --reboot ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -668,7 +668,7 @@ function godspeed {
             elif [[ $NANDERASE == 0 ]] && [[ $DOWNLOAD == 0 ]] && [ $REBOOT == 1 ]; then 
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4 -e -a "$AP" -b "$BL" -c "$CP"  --redownload ;
+                ./odin4 -e -a "$AP" -b "$BL" -c "$CP"  --redownload ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -676,7 +676,7 @@ function godspeed {
             elif [[ $NANDERASE == 1 ]] && [[ $DOWNLOAD == 0 ]] && [[ $REBOOT == 1 ]]; then
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4 -a "$AP" -b "$BL" -c "$CP" --redownload ;
+                ./odin4 -a "$AP" -b "$BL" -c "$CP" --redownload ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -704,7 +704,7 @@ function godspeed {
             if [[ $NANDERASE == 0 ]] && [[ $DOWNLOAD == 1 ]] && [[ $REBOOT == 0 ]]; then 
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4 -e -a "$AP" -b "$BL" -c "$CP" -s "$CSC"  --reboot ;
+                ./odin4 -e -a "$AP" -b "$BL" -c "$CP" -s "$CSC"  --reboot ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -712,7 +712,7 @@ function godspeed {
             elif [[ $NANDERASE == 1 ]] && [[ $DOWNLOAD == 1 ]] && [[ $REBOOT == 0 ]]; then 
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4 -a "$AP" -b "$BL" -c "$CP" -s "$CSC"  --reboot ;
+                ./odin4 -a "$AP" -b "$BL" -c "$CP" -s "$CSC"  --reboot ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -720,7 +720,7 @@ function godspeed {
             elif [[ $NANDERASE == 0 ]] && [[ $DOWNLOAD == 0 ]] && [ $REBOOT == 1 ]; then 
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4 -e -a "$AP" -b "$BL" -c "$CP" -s "$CSC"   --redownload ;
+                ./odin4 -e -a "$AP" -b "$BL" -c "$CP" -s "$CSC"   --redownload ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -728,7 +728,7 @@ function godspeed {
             elif [[ $NANDERASE == 1 ]] && [[ $DOWNLOAD == 0 ]] && [[ $REBOOT == 1 ]]; then
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4 -a "$AP" -b "$BL" -c "$CP" -s "$CSC"  --redownload ;
+                ./odin4 -a "$AP" -b "$BL" -c "$CP" -s "$CSC"  --redownload ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -756,7 +756,7 @@ function godspeed {
             if [[ $NANDERASE == 0 ]] && [[ $DOWNLOAD == 1 ]] && [[ $REBOOT == 0 ]]; then 
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4 -e -a "$AP" -b "$BL" -c "$CP" -s "$CSC" -u "$USERDATA" --reboot ;
+                ./odin4 -e -a "$AP" -b "$BL" -c "$CP" -s "$CSC" -u "$USERDATA" --reboot ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -764,7 +764,7 @@ function godspeed {
             elif [[ $NANDERASE == 1 ]] && [[ $DOWNLOAD == 1 ]] && [[ $REBOOT == 0 ]]; then 
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4 -a "$AP" -b "$BL" -c "$CP" -s "$CSC" -u "$USERDATA" --reboot ;
+                ./odin4 -a "$AP" -b "$BL" -c "$CP" -s "$CSC" -u "$USERDATA" --reboot ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -772,7 +772,7 @@ function godspeed {
             elif [[ $NANDERASE == 0 ]] && [[ $DOWNLOAD == 0 ]] && [ $REBOOT == 1 ]; then 
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4 -e -a "$AP" -b "$BL" -c "$CP" -s "$CSC" -u "$USERDATA" --redownload ;
+                ./odin4 -e -a "$AP" -b "$BL" -c "$CP" -s "$CSC" -u "$USERDATA" --redownload ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -780,7 +780,7 @@ function godspeed {
             elif [[ $NANDERASE == 1 ]] && [[ $DOWNLOAD == 0 ]] && [[ $REBOOT == 1 ]]; then
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4 -a "$AP" -b "$BL" -c "$CP" -s "$CSC" -u "$USERDATA" --redownload ;
+                ./odin4 -a "$AP" -b "$BL" -c "$CP" -s "$CSC" -u "$USERDATA" --redownload ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -809,7 +809,7 @@ function godspeed {
             if [[ $NANDERASE == 0 ]] && [[ $DOWNLOAD == 1 ]] && [[ $REBOOT == 0 ]]; then 
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4 -e -b "$BL" -c "$CP" -s "$CSC" -u "$USERDATA" --reboot ;
+                ./odin4 -e -b "$BL" -c "$CP" -s "$CSC" -u "$USERDATA" --reboot ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -817,7 +817,7 @@ function godspeed {
             elif [[ $NANDERASE == 1 ]] && [[ $DOWNLOAD == 1 ]] && [[ $REBOOT == 0 ]]; then 
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4  -b "$BL" -c "$CP" -s "$CSC" -u "$USERDATA" --reboot ;
+                ./odin4  -b "$BL" -c "$CP" -s "$CSC" -u "$USERDATA" --reboot ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -825,7 +825,7 @@ function godspeed {
             elif [[ $NANDERASE == 0 ]] && [[ $DOWNLOAD == 0 ]] && [ $REBOOT == 1 ]; then 
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4 -e  -b "$BL" -c "$CP" -s "$CSC" -u "$USERDATA" --redownload ;
+                ./odin4 -e  -b "$BL" -c "$CP" -s "$CSC" -u "$USERDATA" --redownload ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -833,7 +833,7 @@ function godspeed {
             elif [[ $NANDERASE == 1 ]] && [[ $DOWNLOAD == 0 ]] && [[ $REBOOT == 1 ]]; then
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4  -b "$BL" -c "$CP" -s "$CSC" -u "$USERDATA" --redownload ;
+                ./odin4  -b "$BL" -c "$CP" -s "$CSC" -u "$USERDATA" --redownload ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -861,7 +861,7 @@ function godspeed {
             if [[ $NANDERASE == 0 ]] && [[ $DOWNLOAD == 1 ]] && [[ $REBOOT == 0 ]]; then 
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4 -e  -b "$BL" -c "$CP" -s "$CSC" -u "$USERDATA" -d "$DEVICE_SELECTED" --reboot ;
+                ./odin4 -e  -b "$BL" -c "$CP" -s "$CSC" -u "$USERDATA" -d "$DEVICE_SELECTED" --reboot ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -869,7 +869,7 @@ function godspeed {
             elif [[ $NANDERASE == 1 ]] && [[ $DOWNLOAD == 1 ]] && [[ $REBOOT == 0 ]]; then 
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4  -b "$BL" -c "$CP" -s "$CSC" -u "$USERDATA" -d "$DEVICE_SELECTED" --reboot ;
+                ./odin4  -b "$BL" -c "$CP" -s "$CSC" -u "$USERDATA" -d "$DEVICE_SELECTED" --reboot ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -877,7 +877,7 @@ function godspeed {
             elif [[ $NANDERASE == 0 ]] && [[ $DOWNLOAD == 0 ]] && [ $REBOOT == 1 ]; then 
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4 -e  -b "$BL" -c "$CP" -s "$CSC" -u "$USERDATA" -d "$DEVICE_SELECTED" --redownload ;
+                ./odin4 -e  -b "$BL" -c "$CP" -s "$CSC" -u "$USERDATA" -d "$DEVICE_SELECTED" --redownload ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -885,7 +885,7 @@ function godspeed {
             elif [[ $NANDERASE == 1 ]] && [[ $DOWNLOAD == 0 ]] && [[ $REBOOT == 1 ]]; then
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4  -b "$BL" -c "$CP" -s "$CSC" -u "$USERDATA" -d "$DEVICE_SELECTED" --redownload ;
+                ./odin4  -b "$BL" -c "$CP" -s "$CSC" -u "$USERDATA" -d "$DEVICE_SELECTED" --redownload ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -913,7 +913,7 @@ function godspeed {
             if [[ $NANDERASE == 0 ]] && [[ $DOWNLOAD == 1 ]] && [[ $REBOOT == 0 ]]; then 
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4 -e  -c "$CP" -s "$CSC" -u "$USERDATA" -d "$DEVICE_SELECTED" --reboot ;
+                ./odin4 -e  -c "$CP" -s "$CSC" -u "$USERDATA" -d "$DEVICE_SELECTED" --reboot ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -921,7 +921,7 @@ function godspeed {
             elif [[ $NANDERASE == 1 ]] && [[ $DOWNLOAD == 1 ]] && [[ $REBOOT == 0 ]]; then 
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4  -c "$CP" -s "$CSC" -u "$USERDATA" -d "$DEVICE_SELECTED" --reboot ;
+                ./odin4  -c "$CP" -s "$CSC" -u "$USERDATA" -d "$DEVICE_SELECTED" --reboot ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -929,7 +929,7 @@ function godspeed {
             elif [[ $NANDERASE == 0 ]] && [[ $DOWNLOAD == 0 ]] && [ $REBOOT == 1 ]; then 
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4 -e -c "$CP" -s "$CSC" -u "$USERDATA" -d "$DEVICE_SELECTED" --redownload ;
+                ./odin4 -e -c "$CP" -s "$CSC" -u "$USERDATA" -d "$DEVICE_SELECTED" --redownload ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -937,7 +937,7 @@ function godspeed {
             elif [[ $NANDERASE == 1 ]] && [[ $DOWNLOAD == 0 ]] && [[ $REBOOT == 1 ]]; then
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4 -c "$CP" -s "$CSC" -u "$USERDATA" -d "$DEVICE_SELECTED" --redownload ;
+                ./odin4 -c "$CP" -s "$CSC" -u "$USERDATA" -d "$DEVICE_SELECTED" --redownload ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -965,7 +965,7 @@ function godspeed {
             if [[ $NANDERASE == 0 ]] && [[ $DOWNLOAD == 1 ]] && [[ $REBOOT == 0 ]]; then 
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4 -e -s "$CSC" -u "$USERDATA" -d "$DEVICE_SELECTED" --reboot ;
+                ./odin4 -e -s "$CSC" -u "$USERDATA" -d "$DEVICE_SELECTED" --reboot ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -973,7 +973,7 @@ function godspeed {
             elif [[ $NANDERASE == 1 ]] && [[ $DOWNLOAD == 1 ]] && [[ $REBOOT == 0 ]]; then 
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4   -s "$CSC" -u "$USERDATA" -d "$DEVICE_SELECTED" --reboot ;
+                ./odin4   -s "$CSC" -u "$USERDATA" -d "$DEVICE_SELECTED" --reboot ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -981,7 +981,7 @@ function godspeed {
             elif [[ $NANDERASE == 0 ]] && [[ $DOWNLOAD == 0 ]] && [ $REBOOT == 1 ]; then 
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4 -e  -s "$CSC" -u "$USERDATA" -d "$DEVICE_SELECTED" --redownload ;
+                ./odin4 -e  -s "$CSC" -u "$USERDATA" -d "$DEVICE_SELECTED" --redownload ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -989,7 +989,7 @@ function godspeed {
             elif [[ $NANDERASE == 1 ]] && [[ $DOWNLOAD == 0 ]] && [[ $REBOOT == 1 ]]; then
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4 -s "$CSC" -u "$USERDATA" -d "$DEVICE_SELECTED" --redownload ;
+                ./odin4 -s "$CSC" -u "$USERDATA" -d "$DEVICE_SELECTED" --redownload ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -1017,7 +1017,7 @@ function godspeed {
             if [[ $NANDERASE == 0 ]] && [[ $DOWNLOAD == 1 ]] && [[ $REBOOT == 0 ]]; then 
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4 -e  -u "$USERDATA" -d "$DEVICE_SELECTED" --reboot ;
+                ./odin4 -e  -u "$USERDATA" -d "$DEVICE_SELECTED" --reboot ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -1025,7 +1025,7 @@ function godspeed {
             elif [[ $NANDERASE == 1 ]] && [[ $DOWNLOAD == 1 ]] && [[ $REBOOT == 0 ]]; then 
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4   -u "$USERDATA" -d "$DEVICE_SELECTED" --reboot ;
+                ./odin4   -u "$USERDATA" -d "$DEVICE_SELECTED" --reboot ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -1033,7 +1033,7 @@ function godspeed {
             elif [[ $NANDERASE == 0 ]] && [[ $DOWNLOAD == 0 ]] && [ $REBOOT == 1 ]; then 
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4 -e  -u "$USERDATA" -d "$DEVICE_SELECTED" --redownload ;
+                ./odin4 -e  -u "$USERDATA" -d "$DEVICE_SELECTED" --redownload ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -1041,7 +1041,7 @@ function godspeed {
             elif [[ $NANDERASE == 1 ]] && [[ $DOWNLOAD == 0 ]] && [[ $REBOOT == 1 ]]; then
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4 -u "$USERDATA" -d "$DEVICE_SELECTED" --redownload ;
+                ./odin4 -u "$USERDATA" -d "$DEVICE_SELECTED" --redownload ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -1069,7 +1069,7 @@ function godspeed {
             if [[ $NANDERASE == 0 ]] && [[ $DOWNLOAD == 1 ]] && [[ $REBOOT == 0 ]]; then 
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4 -e  -u "$USERDATA" -d "$DEVICE_SELECTED" --reboot ;
+                ./odin4 -e  -u "$USERDATA" -d "$DEVICE_SELECTED" --reboot ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -1077,7 +1077,7 @@ function godspeed {
             elif [[ $NANDERASE == 1 ]] && [[ $DOWNLOAD == 1 ]] && [[ $REBOOT == 0 ]]; then 
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4   -u "$USERDATA" -d "$DEVICE_SELECTED" --reboot ;
+                ./odin4   -u "$USERDATA" -d "$DEVICE_SELECTED" --reboot ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -1085,7 +1085,7 @@ function godspeed {
             elif [[ $NANDERASE == 0 ]] && [[ $DOWNLOAD == 0 ]] && [ $REBOOT == 1 ]; then 
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4 -e  -u "$USERDATA" -d "$DEVICE_SELECTED" --redownload ;
+                ./odin4 -e  -u "$USERDATA" -d "$DEVICE_SELECTED" --redownload ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -1093,7 +1093,7 @@ function godspeed {
             elif [[ $NANDERASE == 1 ]] && [[ $DOWNLOAD == 0 ]] && [[ $REBOOT == 1 ]]; then
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4 -u "$USERDATA" -d "$DEVICE_SELECTED" --redownload ;
+                ./odin4 -u "$USERDATA" -d "$DEVICE_SELECTED" --redownload ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -1121,7 +1121,7 @@ function godspeed {
             if [[ $NANDERASE == 0 ]] && [[ $DOWNLOAD == 1 ]] && [[ $REBOOT == 0 ]]; then 
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4 -e  -b "$BL" -c "$CP" -s "$CSC" -u "$USERDATA" --reboot ;
+                ./odin4 -e  -b "$BL" -c "$CP" -s "$CSC" -u "$USERDATA" --reboot ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -1129,7 +1129,7 @@ function godspeed {
             elif [[ $NANDERASE == 1 ]] && [[ $DOWNLOAD == 1 ]] && [[ $REBOOT == 0 ]]; then 
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4  -b "$BL" -c "$CP" -s "$CSC" -u "$USERDATA"  --reboot ;
+                ./odin4  -b "$BL" -c "$CP" -s "$CSC" -u "$USERDATA"  --reboot ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -1137,7 +1137,7 @@ function godspeed {
             elif [[ $NANDERASE == 0 ]] && [[ $DOWNLOAD == 0 ]] && [ $REBOOT == 1 ]; then 
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4 -e  -b "$BL" -c "$CP" -s "$CSC" -u "$USERDATA"  --redownload ;
+                ./odin4 -e  -b "$BL" -c "$CP" -s "$CSC" -u "$USERDATA"  --redownload ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -1145,7 +1145,7 @@ function godspeed {
             elif [[ $NANDERASE == 1 ]] && [[ $DOWNLOAD == 0 ]] && [[ $REBOOT == 1 ]]; then
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4  -b "$BL" -c "$CP" -s "$CSC" -u "$USERDATA" --redownload ;
+                ./odin4  -b "$BL" -c "$CP" -s "$CSC" -u "$USERDATA" --redownload ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -1173,7 +1173,7 @@ function godspeed {
             if [[ $NANDERASE == 0 ]] && [[ $DOWNLOAD == 1 ]] && [[ $REBOOT == 0 ]]; then 
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4 -e  -c "$CP" -s "$CSC" -u "$USERDATA"  --reboot ;
+                ./odin4 -e  -c "$CP" -s "$CSC" -u "$USERDATA"  --reboot ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -1181,7 +1181,7 @@ function godspeed {
             elif [[ $NANDERASE == 1 ]] && [[ $DOWNLOAD == 1 ]] && [[ $REBOOT == 0 ]]; then 
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4  -c "$CP" -s "$CSC" -u "$USERDATA" --reboot ;
+                ./odin4  -c "$CP" -s "$CSC" -u "$USERDATA" --reboot ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -1189,7 +1189,7 @@ function godspeed {
             elif [[ $NANDERASE == 0 ]] && [[ $DOWNLOAD == 0 ]] && [ $REBOOT == 1 ]; then 
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4 -e -c "$CP" -s "$CSC" -u "$USERDATA"  --redownload ;
+                ./odin4 -e -c "$CP" -s "$CSC" -u "$USERDATA"  --redownload ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -1197,7 +1197,7 @@ function godspeed {
             elif [[ $NANDERASE == 1 ]] && [[ $DOWNLOAD == 0 ]] && [[ $REBOOT == 1 ]]; then
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4 -c "$CP" -s "$CSC" -u "$USERDATA"  --redownload ;
+                ./odin4 -c "$CP" -s "$CSC" -u "$USERDATA"  --redownload ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -1225,7 +1225,7 @@ function godspeed {
             if [[ $NANDERASE == 0 ]] && [[ $DOWNLOAD == 1 ]] && [[ $REBOOT == 0 ]]; then 
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4 -e -s "$CSC" -u "$USERDATA"  --reboot ;
+                ./odin4 -e -s "$CSC" -u "$USERDATA"  --reboot ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -1233,7 +1233,7 @@ function godspeed {
             elif [[ $NANDERASE == 1 ]] && [[ $DOWNLOAD == 1 ]] && [[ $REBOOT == 0 ]]; then 
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4   -s "$CSC" -u "$USERDATA" --reboot ;
+                ./odin4   -s "$CSC" -u "$USERDATA" --reboot ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -1241,7 +1241,7 @@ function godspeed {
             elif [[ $NANDERASE == 0 ]] && [[ $DOWNLOAD == 0 ]] && [ $REBOOT == 1 ]; then 
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4 -e  -s "$CSC" -u "$USERDATA" --redownload ;
+                ./odin4 -e  -s "$CSC" -u "$USERDATA" --redownload ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -1249,7 +1249,7 @@ function godspeed {
             elif [[ $NANDERASE == 1 ]] && [[ $DOWNLOAD == 0 ]] && [[ $REBOOT == 1 ]]; then
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4 -s "$CSC" -u "$USERDATA" --redownload ;
+                ./odin4 -s "$CSC" -u "$USERDATA" --redownload ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -1277,7 +1277,7 @@ function godspeed {
             if [[ $NANDERASE == 0 ]] && [[ $DOWNLOAD == 1 ]] && [[ $REBOOT == 0 ]]; then 
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4 -e  -u "$USERDATA"  --reboot ;
+                ./odin4 -e  -u "$USERDATA"  --reboot ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -1285,7 +1285,7 @@ function godspeed {
             elif [[ $NANDERASE == 1 ]] && [[ $DOWNLOAD == 1 ]] && [[ $REBOOT == 0 ]]; then 
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4   -u "$USERDATA"  --reboot ;
+                ./odin4   -u "$USERDATA"  --reboot ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -1293,7 +1293,7 @@ function godspeed {
             elif [[ $NANDERASE == 0 ]] && [[ $DOWNLOAD == 0 ]] && [ $REBOOT == 1 ]; then 
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4 -e  -u "$USERDATA" --redownload ;
+                ./odin4 -e  -u "$USERDATA" --redownload ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -1301,7 +1301,7 @@ function godspeed {
             elif [[ $NANDERASE == 1 ]] && [[ $DOWNLOAD == 0 ]] && [[ $REBOOT == 1 ]]; then
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4 -u "$USERDATA" --redownload ;
+                ./odin4 -u "$USERDATA" --redownload ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -1329,7 +1329,7 @@ function godspeed {
             if [[ $NANDERASE == 0 ]] && [[ $DOWNLOAD == 1 ]] && [[ $REBOOT == 0 ]]; then 
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4 -e -a "$AP" -d "$DEVICE_SELECTED" --reboot ;
+                ./odin4 -e -a "$AP" -d "$DEVICE_SELECTED" --reboot ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -1337,7 +1337,7 @@ function godspeed {
             elif [[ $NANDERASE == 1 ]] && [[ $DOWNLOAD == 1 ]] && [[ $REBOOT == 0 ]]; then 
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4 -a "$AP" -d "$DEVICE_SELECTED" --reboot ;
+                ./odin4 -a "$AP" -d "$DEVICE_SELECTED" --reboot ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -1345,7 +1345,7 @@ function godspeed {
             elif [[ $NANDERASE == 0 ]] && [[ $DOWNLOAD == 0 ]] && [ $REBOOT == 1 ]; then 
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4 -e -a "$AP" -d "$DEVICE_SELECTED" --redownload ;
+                ./odin4 -e -a "$AP" -d "$DEVICE_SELECTED" --redownload ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -1353,7 +1353,7 @@ function godspeed {
             elif [[ $NANDERASE == 1 ]] && [[ $DOWNLOAD == 0 ]] && [[ $REBOOT == 1 ]]; then
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4 -a "$AP"  -d "$DEVICE_SELECTED" --redownload ;
+                ./odin4 -a "$AP"  -d "$DEVICE_SELECTED" --redownload ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -1381,7 +1381,7 @@ function godspeed {
             if [[ $NANDERASE == 0 ]] && [[ $DOWNLOAD == 1 ]] && [[ $REBOOT == 0 ]]; then 
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4 -e -a "$AP" --reboot ;
+                ./odin4 -e -a "$AP" --reboot ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -1389,7 +1389,7 @@ function godspeed {
             elif [[ $NANDERASE == 1 ]] && [[ $DOWNLOAD == 1 ]] && [[ $REBOOT == 0 ]]; then 
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4 -a "$AP"  --reboot ;
+                ./odin4 -a "$AP"  --reboot ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -1397,7 +1397,7 @@ function godspeed {
             elif [[ $NANDERASE == 0 ]] && [[ $DOWNLOAD == 0 ]] && [ $REBOOT == 1 ]; then 
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4 -e -a "$AP"  --redownload ;
+                ./odin4 -e -a "$AP"  --redownload ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -1405,7 +1405,7 @@ function godspeed {
             elif [[ $NANDERASE == 1 ]] && [[ $DOWNLOAD == 0 ]] && [[ $REBOOT == 1 ]]; then
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4 -a "$AP"  --redownload ;
+                ./odin4 -a "$AP"  --redownload ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -1433,7 +1433,7 @@ function godspeed {
             if [[ $NANDERASE == 0 ]] && [[ $DOWNLOAD == 1 ]] && [[ $REBOOT == 0 ]]; then 
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4 -e  -b "$BL"  -d "$DEVICE_SELECTED" --reboot ;
+                ./odin4 -e  -b "$BL"  -d "$DEVICE_SELECTED" --reboot ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -1441,7 +1441,7 @@ function godspeed {
             elif [[ $NANDERASE == 1 ]] && [[ $DOWNLOAD == 1 ]] && [[ $REBOOT == 0 ]]; then 
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4  -b "$BL"  -d "$DEVICE_SELECTED" --reboot ;
+                ./odin4  -b "$BL"  -d "$DEVICE_SELECTED" --reboot ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -1449,7 +1449,7 @@ function godspeed {
             elif [[ $NANDERASE == 0 ]] && [[ $DOWNLOAD == 0 ]] && [ $REBOOT == 1 ]; then 
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4 -e  -b "$BL" -d "$DEVICE_SELECTED" --redownload ;
+                ./odin4 -e  -b "$BL" -d "$DEVICE_SELECTED" --redownload ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -1457,7 +1457,7 @@ function godspeed {
             elif [[ $NANDERASE == 1 ]] && [[ $DOWNLOAD == 0 ]] && [[ $REBOOT == 1 ]]; then
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4  -b "$BL" -d "$DEVICE_SELECTED" --redownload ;
+                ./odin4  -b "$BL" -d "$DEVICE_SELECTED" --redownload ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -1485,7 +1485,7 @@ function godspeed {
             if [[ $NANDERASE == 0 ]] && [[ $DOWNLOAD == 1 ]] && [[ $REBOOT == 0 ]]; then 
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4 -e  -b "$BL" --reboot ;
+                ./odin4 -e  -b "$BL" --reboot ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -1493,7 +1493,7 @@ function godspeed {
             elif [[ $NANDERASE == 1 ]] && [[ $DOWNLOAD == 1 ]] && [[ $REBOOT == 0 ]]; then 
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4  -b "$BL" --reboot ;
+                ./odin4  -b "$BL" --reboot ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -1501,7 +1501,7 @@ function godspeed {
             elif [[ $NANDERASE == 0 ]] && [[ $DOWNLOAD == 0 ]] && [ $REBOOT == 1 ]; then 
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4 -e  -b "$BL" --redownload ;
+                ./odin4 -e  -b "$BL" --redownload ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -1509,7 +1509,7 @@ function godspeed {
             elif [[ $NANDERASE == 1 ]] && [[ $DOWNLOAD == 0 ]] && [[ $REBOOT == 1 ]]; then
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4  -b "$BL"  --redownload ;
+                ./odin4  -b "$BL"  --redownload ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -1537,7 +1537,7 @@ function godspeed {
             if [[ $NANDERASE == 0 ]] && [[ $DOWNLOAD == 1 ]] && [[ $REBOOT == 0 ]]; then 
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4 -e -c "$CP"  -d "$DEVICE_SELECTED" --reboot ;
+                ./odin4 -e -c "$CP"  -d "$DEVICE_SELECTED" --reboot ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -1545,7 +1545,7 @@ function godspeed {
             elif [[ $NANDERASE == 1 ]] && [[ $DOWNLOAD == 1 ]] && [[ $REBOOT == 0 ]]; then 
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4  -c "$CP"  -d "$DEVICE_SELECTED" --reboot ;
+                ./odin4  -c "$CP"  -d "$DEVICE_SELECTED" --reboot ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -1553,7 +1553,7 @@ function godspeed {
             elif [[ $NANDERASE == 0 ]] && [[ $DOWNLOAD == 0 ]] && [ $REBOOT == 1 ]; then 
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4 -e  -c "$CP" -d "$DEVICE_SELECTED" --redownload ;
+                ./odin4 -e  -c "$CP" -d "$DEVICE_SELECTED" --redownload ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -1561,7 +1561,7 @@ function godspeed {
             elif [[ $NANDERASE == 1 ]] && [[ $DOWNLOAD == 0 ]] && [[ $REBOOT == 1 ]]; then
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4  -c "$CP" -d "$DEVICE_SELECTED" --redownload ;
+                ./odin4  -c "$CP" -d "$DEVICE_SELECTED" --redownload ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -1589,7 +1589,7 @@ function godspeed {
             if [[ $NANDERASE == 0 ]] && [[ $DOWNLOAD == 1 ]] && [[ $REBOOT == 0 ]]; then 
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4 -e -c "$CP"   --reboot ;
+                ./odin4 -e -c "$CP"   --reboot ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -1597,7 +1597,7 @@ function godspeed {
             elif [[ $NANDERASE == 1 ]] && [[ $DOWNLOAD == 1 ]] && [[ $REBOOT == 0 ]]; then 
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4  -c "$CP"   --reboot ;
+                ./odin4  -c "$CP"   --reboot ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -1605,7 +1605,7 @@ function godspeed {
             elif [[ $NANDERASE == 0 ]] && [[ $DOWNLOAD == 0 ]] && [ $REBOOT == 1 ]; then 
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4 -e  -c "$CP"  --redownload ;
+                ./odin4 -e  -c "$CP"  --redownload ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -1613,7 +1613,7 @@ function godspeed {
             elif [[ $NANDERASE == 1 ]] && [[ $DOWNLOAD == 0 ]] && [[ $REBOOT == 1 ]]; then
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4  -c "$CP"  --redownload ;
+                ./odin4  -c "$CP"  --redownload ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -1641,7 +1641,7 @@ function godspeed {
             if [[ $NANDERASE == 0 ]] && [[ $DOWNLOAD == 1 ]] && [[ $REBOOT == 0 ]]; then 
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4 -e  -s "$CSC" -d "$DEVICE_SELECTED" --reboot ;
+                ./odin4 -e  -s "$CSC" -d "$DEVICE_SELECTED" --reboot ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -1649,7 +1649,7 @@ function godspeed {
             elif [[ $NANDERASE == 1 ]] && [[ $DOWNLOAD == 1 ]] && [[ $REBOOT == 0 ]]; then 
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4 -s "$CSC"  -d "$DEVICE_SELECTED" --reboot ;
+                ./odin4 -s "$CSC"  -d "$DEVICE_SELECTED" --reboot ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -1657,7 +1657,7 @@ function godspeed {
             elif [[ $NANDERASE == 0 ]] && [[ $DOWNLOAD == 0 ]] && [ $REBOOT == 1 ]; then 
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4 -e -s "$CSC"  -d "$DEVICE_SELECTED" --redownload ;
+                ./odin4 -e -s "$CSC"  -d "$DEVICE_SELECTED" --redownload ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -1665,7 +1665,7 @@ function godspeed {
             elif [[ $NANDERASE == 1 ]] && [[ $DOWNLOAD == 0 ]] && [[ $REBOOT == 1 ]]; then
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4  -s "$CSC"  -d "$DEVICE_SELECTED" --redownload ;
+                ./odin4  -s "$CSC"  -d "$DEVICE_SELECTED" --redownload ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -1693,7 +1693,7 @@ function godspeed {
             if [[ $NANDERASE == 0 ]] && [[ $DOWNLOAD == 1 ]] && [[ $REBOOT == 0 ]]; then 
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4 -e  -s "$CSC"  --reboot ;
+                ./odin4 -e  -s "$CSC"  --reboot ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -1701,7 +1701,7 @@ function godspeed {
             elif [[ $NANDERASE == 1 ]] && [[ $DOWNLOAD == 1 ]] && [[ $REBOOT == 0 ]]; then 
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4 -s "$CSC"  --reboot ;
+                ./odin4 -s "$CSC"  --reboot ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -1709,7 +1709,7 @@ function godspeed {
             elif [[ $NANDERASE == 0 ]] && [[ $DOWNLOAD == 0 ]] && [ $REBOOT == 1 ]; then 
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4 -e -s "$CSC"   --redownload ;
+                ./odin4 -e -s "$CSC"   --redownload ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -1717,7 +1717,7 @@ function godspeed {
             elif [[ $NANDERASE == 1 ]] && [[ $DOWNLOAD == 0 ]] && [[ $REBOOT == 1 ]]; then
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4  -s "$CSC"  --redownload ;
+                ./odin4  -s "$CSC"  --redownload ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -1745,7 +1745,7 @@ function godspeed {
             if [[ $NANDERASE == 0 ]] && [[ $DOWNLOAD == 1 ]] && [[ $REBOOT == 0 ]]; then 
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4 -e -u "$USERDATA" -d "$DEVICE_SELECTED" --reboot ;
+                ./odin4 -e -u "$USERDATA" -d "$DEVICE_SELECTED" --reboot ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -1753,7 +1753,7 @@ function godspeed {
             elif [[ $NANDERASE == 1 ]] && [[ $DOWNLOAD == 1 ]] && [[ $REBOOT == 0 ]]; then 
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4  -u "$USERDATA" -d "$DEVICE_SELECTED" --reboot ;
+                ./odin4  -u "$USERDATA" -d "$DEVICE_SELECTED" --reboot ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -1761,7 +1761,7 @@ function godspeed {
             elif [[ $NANDERASE == 0 ]] && [[ $DOWNLOAD == 0 ]] && [ $REBOOT == 1 ]; then 
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4 -e  -u "$USERDATA" -d "$DEVICE_SELECTED" --redownload ;
+                ./odin4 -e  -u "$USERDATA" -d "$DEVICE_SELECTED" --redownload ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -1769,7 +1769,7 @@ function godspeed {
             elif [[ $NANDERASE == 1 ]] && [[ $DOWNLOAD == 0 ]] && [[ $REBOOT == 1 ]]; then
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4 -u "$USERDATA" -d "$DEVICE_SELECTED" --redownload ;
+                ./odin4 -u "$USERDATA" -d "$DEVICE_SELECTED" --redownload ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -1797,7 +1797,7 @@ function godspeed {
             if [[ $NANDERASE == 0 ]] && [[ $DOWNLOAD == 1 ]] && [[ $REBOOT == 0 ]]; then 
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4 -e -u "$USERDATA"  --reboot ;
+                ./odin4 -e -u "$USERDATA"  --reboot ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -1805,7 +1805,7 @@ function godspeed {
             elif [[ $NANDERASE == 1 ]] && [[ $DOWNLOAD == 1 ]] && [[ $REBOOT == 0 ]]; then 
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4  -u "$USERDATA" --reboot ;
+                ./odin4  -u "$USERDATA" --reboot ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -1813,7 +1813,7 @@ function godspeed {
             elif [[ $NANDERASE == 0 ]] && [[ $DOWNLOAD == 0 ]] && [ $REBOOT == 1 ]; then 
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4 -e  -u "$USERDATA" --redownload ;
+                ./odin4 -e  -u "$USERDATA" --redownload ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -1821,7 +1821,7 @@ function godspeed {
             elif [[ $NANDERASE == 1 ]] && [[ $DOWNLOAD == 0 ]] && [[ $REBOOT == 1 ]]; then
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4 -u "$USERDATA"  --redownload ;
+                ./odin4 -u "$USERDATA"  --redownload ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -1849,7 +1849,7 @@ function godspeed {
             if [[ $NANDERASE == 0 ]] && [[ $DOWNLOAD == 1 ]] && [[ $REBOOT == 0 ]]; then 
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4 -e  -c "$CP"  -d "$DEVICE_SELECTED" --reboot ;
+                ./odin4 -e  -c "$CP"  -d "$DEVICE_SELECTED" --reboot ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -1857,7 +1857,7 @@ function godspeed {
             elif [[ $NANDERASE == 1 ]] && [[ $DOWNLOAD == 1 ]] && [[ $REBOOT == 0 ]]; then 
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4  -c "$CP"  -d "$DEVICE_SELECTED" --reboot ;
+                ./odin4  -c "$CP"  -d "$DEVICE_SELECTED" --reboot ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -1865,7 +1865,7 @@ function godspeed {
             elif [[ $NANDERASE == 0 ]] && [[ $DOWNLOAD == 0 ]] && [ $REBOOT == 1 ]; then 
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4 -e - -c "$CP" -d "$DEVICE_SELECTED" --redownload ;
+                ./odin4 -e - -c "$CP" -d "$DEVICE_SELECTED" --redownload ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -1873,7 +1873,7 @@ function godspeed {
             elif [[ $NANDERASE == 1 ]] && [[ $DOWNLOAD == 0 ]] && [[ $REBOOT == 1 ]]; then
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4 -c "$CP"  -d "$DEVICE_SELECTED" --redownload ;
+                ./odin4 -c "$CP"  -d "$DEVICE_SELECTED" --redownload ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -1901,7 +1901,7 @@ function godspeed {
             if [[ $NANDERASE == 0 ]] && [[ $DOWNLOAD == 1 ]] && [[ $REBOOT == 0 ]]; then 
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4 -e  -c "$CP"  --reboot ;
+                ./odin4 -e  -c "$CP"  --reboot ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -1909,7 +1909,7 @@ function godspeed {
             elif [[ $NANDERASE == 1 ]] && [[ $DOWNLOAD == 1 ]] && [[ $REBOOT == 0 ]]; then 
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4  -c "$CP" --reboot ;
+                ./odin4  -c "$CP" --reboot ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -1917,7 +1917,7 @@ function godspeed {
             elif [[ $NANDERASE == 0 ]] && [[ $DOWNLOAD == 0 ]] && [ $REBOOT == 1 ]; then 
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4 -e  -c "$CP"  --redownload ;
+                ./odin4 -e  -c "$CP"  --redownload ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -1925,7 +1925,7 @@ function godspeed {
             elif [[ $NANDERASE == 1 ]] && [[ $DOWNLOAD == 0 ]] && [[ $REBOOT == 1 ]]; then
                 echo "50" ; sleep 1
                 echo "# Flasing NOW"
-                bin/odin4 -c "$CP" --redownload ;
+                ./odin4 -c "$CP" --redownload ;
                 echo "80" ; sleep 1
                 echo "# RESET"
                 echo "# ODIN DONE" ; sleep 1
@@ -2004,7 +2004,7 @@ function seek {
                 --list --title="Device Detected by ODIN4" --height="500" --width="500" \
                 --text="Device detected by ODIN" \
                 --column="DEVICE" \
-                $(bin/odin4 -l | awk '{print $1}') ) # REAL AUTOMATED LOL
+                $(./odin4 -l | awk '{print $1}') ) # REAL AUTOMATED LOL
         exitv=$?
         case $exitv in 
             *)
